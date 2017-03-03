@@ -1,6 +1,9 @@
 # Project Name
+
 RMBLEManager
+
 # Description
+
 Implementation of central manager of CoreBluetooth Framework.
 This is a very simple CocoaTouch Framework intented to handle peripherals BLE devices from an iOS device.
 
