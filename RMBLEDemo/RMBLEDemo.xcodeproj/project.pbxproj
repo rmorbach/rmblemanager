@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E4151881E67784500D8288B /* AddBleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4151871E67784500D8288B /* AddBleViewController.swift */; };
+		5E6602B51E68FA48008DA1B7 /* RMBLEManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */; };
+		5E6602B61E68FA48008DA1B7 /* RMBLEManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5EFB31E61E6764B7003A0FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */; };
+		5EFB31E81E6764B7003A0FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31E71E6764B7003A0FE3 /* ViewController.swift */; };
+		5EFB31EB1E6764B7003A0FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB31E91E6764B7003A0FE3 /* Main.storyboard */; };
+		5EFB31ED1E6764B7003A0FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB31EC1E6764B7003A0FE3 /* Assets.xcassets */; };
+		5EFB31F01E6764B7003A0FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB31EE1E6764B7003A0FE3 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5EFB32051E677532003A0FE3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5E6602B61E68FA48008DA1B7 /* RMBLEManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5E4151871E67784500D8288B /* AddBleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBleViewController.swift; sourceTree = "<group>"; };
+		5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMBLEManager.framework; sourceTree = "<group>"; };
+		5EFB31E21E6764B7003A0FE3 /* RMBLEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMBLEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EFB31E71E6764B7003A0FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EFB31EA1E6764B7003A0FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EFB31EC1E6764B7003A0FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EFB31EF1E6764B7003A0FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EFB31F11E6764B7003A0FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EFB31DF1E6764B7003A0FE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E6602B51E68FA48008DA1B7 /* RMBLEManager.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EFB31D91E6764B7003A0FE3 = {
+			isa = PBXGroup;
+			children = (
+				5EFB31E41E6764B7003A0FE3 /* RMBLEDemo */,
+				5EFB31E31E6764B7003A0FE3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EFB31E31E6764B7003A0FE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EFB31E21E6764B7003A0FE3 /* RMBLEDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EFB31E41E6764B7003A0FE3 /* RMBLEDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */,
+				5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */,
+				5EFB31E71E6764B7003A0FE3 /* ViewController.swift */,
+				5EFB31E91E6764B7003A0FE3 /* Main.storyboard */,
+				5EFB31EC1E6764B7003A0FE3 /* Assets.xcassets */,
+				5EFB31EE1E6764B7003A0FE3 /* LaunchScreen.storyboard */,
+				5EFB31F11E6764B7003A0FE3 /* Info.plist */,
+				5E4151871E67784500D8288B /* AddBleViewController.swift */,
+			);
+			path = RMBLEDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EFB31E11E6764B7003A0FE3 /* RMBLEDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EFB31F41E6764B7003A0FE3 /* Build configuration list for PBXNativeTarget "RMBLEDemo" */;
+			buildPhases = (
+				5EFB31DE1E6764B7003A0FE3 /* Sources */,
+				5EFB31DF1E6764B7003A0FE3 /* Frameworks */,
+				5EFB31E01E6764B7003A0FE3 /* Resources */,
+				5EFB32051E677532003A0FE3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMBLEDemo;
+			productName = RMBLEDemo;
+			productReference = 5EFB31E21E6764B7003A0FE3 /* RMBLEDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EFB31DA1E6764B7003A0FE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Morbach Inc.";
+				TargetAttributes = {
+					5EFB31E11E6764B7003A0FE3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YRTZUYMLE3;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 5EFB31DD1E6764B7003A0FE3 /* Build configuration list for PBXProject "RMBLEDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EFB31D91E6764B7003A0FE3;
+			productRefGroup = 5EFB31E31E6764B7003A0FE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EFB31E11E6764B7003A0FE3 /* RMBLEDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EFB31E01E6764B7003A0FE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EFB31F01E6764B7003A0FE3 /* LaunchScreen.storyboard in Resources */,
+				5EFB31ED1E6764B7003A0FE3 /* Assets.xcassets in Resources */,
+				5EFB31EB1E6764B7003A0FE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EFB31DE1E6764B7003A0FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E4151881E67784500D8288B /* AddBleViewController.swift in Sources */,
+				5EFB31E81E6764B7003A0FE3 /* ViewController.swift in Sources */,
+				5EFB31E61E6764B7003A0FE3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EFB31E91E6764B7003A0FE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EFB31EA1E6764B7003A0FE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EFB31EE1E6764B7003A0FE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EFB31EF1E6764B7003A0FE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EFB31F21E6764B7003A0FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EFB31F31E6764B7003A0FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EFB31F51E6764B7003A0FE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YRTZUYMLE3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMBLEDemo",
+				);
+				INFOPLIST_FILE = RMBLEDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b03786c7-53fe-4b2f-9d81-a46a0595b6da";
+				PROVISIONING_PROFILE_SPECIFIER = rodrigomorbach;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5EFB31F61E6764B7003A0FE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMBLEDemo",
+				);
+				INFOPLIST_FILE = RMBLEDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EFB31DD1E6764B7003A0FE3 /* Build configuration list for PBXProject "RMBLEDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EFB31F21E6764B7003A0FE3 /* Debug */,
+				5EFB31F31E6764B7003A0FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EFB31F41E6764B7003A0FE3 /* Build configuration list for PBXNativeTarget "RMBLEDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EFB31F51E6764B7003A0FE3 /* Debug */,
+				5EFB31F61E6764B7003A0FE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EFB31DA1E6764B7003A0FE3 /* Project object */;
+}

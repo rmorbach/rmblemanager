@@ -1,0 +1,10 @@
+framework module RMBLEManager {
+  umbrella header "RMBLEManager.h"
+
+  export *
+  module * { export * }
+}
+
+module RMBLEManager.Swift {
+    header "RMBLEManager-Swift.h"
+}
