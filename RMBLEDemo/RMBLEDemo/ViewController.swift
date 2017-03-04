@@ -91,7 +91,16 @@ extension ViewController: RMBLEManagerProtocol
     }
     
     func bleManager(bleManager: RMBLEManager?, didConnect peripheral: CBPeripheral?) {
-        self.status.text = "Connected to \(peripheral!.name!)"
+        var name = ""
+        if peripheral!.name != nil
+        {
+            name = peripheral!.name!
+        }
+        else
+        {
+            name = peripheral!.identifier.uuidString
+        }
+        self.status.text = "Connected to \(name)"
         self.batteryLevelLabel.isHidden = false
         self.batteryLevelLabel.text = "-";
     }

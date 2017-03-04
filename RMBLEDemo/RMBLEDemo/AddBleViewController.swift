@@ -52,7 +52,16 @@ extension AddBleViewController: UITableViewDataSource
         if let cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         {
             let peripheral = devices[indexPath.row]
-            cell.textLabel?.text = peripheral.name!
+            var name = ""
+            if peripheral.name != nil
+            {
+                name = peripheral.name!
+            }
+            else
+            {
+                name = peripheral.identifier.uuidString
+            }
+            cell.textLabel?.text = name
             return cell
         }
         return UITableViewCell(style: .default, reuseIdentifier: "bleCell")
