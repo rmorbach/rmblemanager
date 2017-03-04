@@ -18,6 +18,13 @@ class AddBleViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.backgroundColor = UIColor.cyan
+        self.tableView.refreshControl?.tintColor = UIColor.white
+        self.tableView.refreshControl?.addTarget(self, action: #selector(reloadTable), for: UIControlEvents.valueChanged)
+        let attributedTextProperties = [NSForegroundColorAttributeName: UIColor.black]
+        let attributedString = NSAttributedString(string: "Scanning devices", attributes: attributedTextProperties)
+        self.tableView.refreshControl?.attributedTitle = attributedString
         // Do any additional setup after loading the view.
     }
     
@@ -38,6 +45,12 @@ class AddBleViewController: UIViewController {
     }
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func reloadTable()
+    {
+        self.devices.removeAll()
+        self.tableView.reloadData()
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -69,7 +82,20 @@ extension AddBleViewController: UITableViewDataSource
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1;
+        if devices.count > 0
+        {
+            self.tableView.backgroundView = nil
+            self.tableView.separatorStyle = .singleLine
+            return 1
+        }
+        let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
+        emptyLabel.text = "None devices have been found"
+        emptyLabel.textColor = UIColor.red
+        emptyLabel.textAlignment = NSTextAlignment.center
+        emptyLabel.sizeToFit()
+        self.tableView.backgroundView = emptyLabel
+        self.tableView.separatorStyle = .none
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,6 +132,13 @@ extension AddBleViewController:RMBLEManagerProtocol
     }
     
     func bleManager(bleManager: RMBLEManager?, didDiscover peripheral: CBPeripheral?) {
+        if let refreshControl = self.tableView.refreshControl
+        {
+            if refreshControl.isRefreshing
+            {
+                refreshControl.endRefreshing()
+            }
+        }
         if devices.contains(peripheral!)
         {
             return
