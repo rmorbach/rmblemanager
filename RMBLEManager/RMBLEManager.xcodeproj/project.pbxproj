@@ -9,22 +9,22 @@
 /* Begin PBXBuildFile section */
 		5E7840F31E679A30003D40CB /* RMBLEGenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7840F21E679A30003D40CB /* RMBLEGenericService.swift */; };
 		5E7840F51E679AA8003D40CB /* RMBLEBatteryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7840F41E679AA8003D40CB /* RMBLEBatteryService.swift */; };
+		5EB89C7821D43EEC00AC1C1E /* RMBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB89C7521D43EEC00AC1C1E /* RMBLEManager.swift */; };
+		5EB89C7921D43EEC00AC1C1E /* RMBLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EB89C7621D43EEC00AC1C1E /* RMBLEManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EB89C7A21D43EEC00AC1C1E /* RMBLEManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB89C7721D43EEC00AC1C1E /* RMBLEManagerProtocol.swift */; };
+		5EB89C8721D4417B00AC1C1E /* RMBLEService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB89C8621D4417B00AC1C1E /* RMBLEService.swift */; };
 		5EFB31D61E6752C5003A0FE3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EFB31D51E6752C5003A0FE3 /* CoreBluetooth.framework */; };
-		5EFB31FB1E676511003A0FE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB31F71E676511003A0FE3 /* Info.plist */; };
-		5EFB31FC1E676511003A0FE3 /* RMBLEManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EFB31F81E676511003A0FE3 /* RMBLEManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5EFB31FD1E676511003A0FE3 /* RMBLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31F91E676511003A0FE3 /* RMBLEManager.swift */; };
-		5EFB31FE1E676511003A0FE3 /* RMBLEManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31FA1E676511003A0FE3 /* RMBLEManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E7840F21E679A30003D40CB /* RMBLEGenericService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMBLEGenericService.swift; sourceTree = "<group>"; };
 		5E7840F41E679AA8003D40CB /* RMBLEBatteryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMBLEBatteryService.swift; sourceTree = "<group>"; };
+		5EB89C7521D43EEC00AC1C1E /* RMBLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMBLEManager.swift; path = RMBLEManager/Core/RMBLEManager.swift; sourceTree = SOURCE_ROOT; };
+		5EB89C7621D43EEC00AC1C1E /* RMBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMBLEManager.h; path = RMBLEManager/Core/RMBLEManager.h; sourceTree = SOURCE_ROOT; };
+		5EB89C7721D43EEC00AC1C1E /* RMBLEManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMBLEManagerProtocol.swift; path = RMBLEManager/Core/RMBLEManagerProtocol.swift; sourceTree = SOURCE_ROOT; };
+		5EB89C8621D4417B00AC1C1E /* RMBLEService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMBLEService.swift; sourceTree = "<group>"; };
 		5EFB31C71E675294003A0FE3 /* RMBLEManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMBLEManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFB31D51E6752C5003A0FE3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		5EFB31F71E676511003A0FE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RMBLEManager/Info.plist; sourceTree = SOURCE_ROOT; };
-		5EFB31F81E676511003A0FE3 /* RMBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMBLEManager.h; path = RMBLEManager/RMBLEManager.h; sourceTree = SOURCE_ROOT; };
-		5EFB31F91E676511003A0FE3 /* RMBLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMBLEManager.swift; path = RMBLEManager/RMBLEManager.swift; sourceTree = SOURCE_ROOT; };
-		5EFB31FA1E676511003A0FE3 /* RMBLEManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RMBLEManagerProtocol.swift; path = RMBLEManager/RMBLEManagerProtocol.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,16 +44,27 @@
 			children = (
 				5E7840F21E679A30003D40CB /* RMBLEGenericService.swift */,
 				5E7840F41E679AA8003D40CB /* RMBLEBatteryService.swift */,
+				5EB89C8621D4417B00AC1C1E /* RMBLEService.swift */,
 			);
 			name = Services;
 			path = RMBLEManager/Services;
 			sourceTree = "<group>";
 		};
+		5EB89C7421D43EB600AC1C1E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5EB89C7621D43EEC00AC1C1E /* RMBLEManager.h */,
+				5EB89C7521D43EEC00AC1C1E /* RMBLEManager.swift */,
+				5EB89C7721D43EEC00AC1C1E /* RMBLEManagerProtocol.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		5EFB31BD1E675294003A0FE3 = {
 			isa = PBXGroup;
 			children = (
+				5EB89C7421D43EB600AC1C1E /* Core */,
 				5E7840F11E679A26003D40CB /* Services */,
-				5EFB31C91E675294003A0FE3 /* RMBLEManager */,
 				5EFB31C81E675294003A0FE3 /* Products */,
 				5EFB31D41E6752C5003A0FE3 /* Frameworks */,
 			);
@@ -65,18 +76,6 @@
 				5EFB31C71E675294003A0FE3 /* RMBLEManager.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5EFB31C91E675294003A0FE3 /* RMBLEManager */ = {
-			isa = PBXGroup;
-			children = (
-				5EFB31F71E676511003A0FE3 /* Info.plist */,
-				5EFB31F81E676511003A0FE3 /* RMBLEManager.h */,
-				5EFB31F91E676511003A0FE3 /* RMBLEManager.swift */,
-				5EFB31FA1E676511003A0FE3 /* RMBLEManagerProtocol.swift */,
-			);
-			name = RMBLEManager;
-			path = CC2650;
 			sourceTree = "<group>";
 		};
 		5EFB31D41E6752C5003A0FE3 /* Frameworks */ = {
@@ -94,7 +93,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFB31FC1E676511003A0FE3 /* RMBLEManager.h in Headers */,
+				5EB89C7921D43EEC00AC1C1E /* RMBLEManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,7 +157,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFB31FB1E676511003A0FE3 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFB31FE1E676511003A0FE3 /* RMBLEManagerProtocol.swift in Sources */,
-				5EFB31FD1E676511003A0FE3 /* RMBLEManager.swift in Sources */,
+				5EB89C7A21D43EEC00AC1C1E /* RMBLEManagerProtocol.swift in Sources */,
 				5E7840F31E679A30003D40CB /* RMBLEGenericService.swift in Sources */,
+				5EB89C7821D43EEC00AC1C1E /* RMBLEManager.swift in Sources */,
 				5E7840F51E679AA8003D40CB /* RMBLEBatteryService.swift in Sources */,
+				5EB89C8721D4417B00AC1C1E /* RMBLEService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +296,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -318,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

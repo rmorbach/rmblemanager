@@ -57,6 +57,19 @@ class AddBleViewController: UIViewController {
     
 }
 
+extension AddBleViewController
+{
+    func sortDevices(_ device1: CBPeripheral,_ device2: CBPeripheral)->Bool
+    {
+        if device1.name != nil && device2.name != nil
+        {
+            return device1.name! < device2.name!
+        }
+        return device1.identifier.uuidString < device2.identifier.uuidString
+    }
+}
+
+
 extension AddBleViewController: UITableViewDataSource
 {
     
@@ -117,8 +130,12 @@ extension AddBleViewController: UITableViewDelegate
 }
 
 
-extension AddBleViewController:RMBLEManagerProtocol
+extension AddBleViewController: RMBLEManagerProtocol
 {
+    func bleManager(bleManager: RMBLEManager?, didReadRSSI rssi: NSNumber, fromPeripheral peripheral: CBPeripheral) {
+        
+    }
+    
     func bleManager(bleManager: RMBLEManager?, didGetNotification characteristic: CBCharacteristic?) {
         
     }
@@ -144,6 +161,7 @@ extension AddBleViewController:RMBLEManagerProtocol
             return
         }
         devices.append(peripheral!)
+        devices = devices.sorted(by: sortDevices)
         self.tableView.reloadData()
         
     }

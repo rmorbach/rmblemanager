@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var batteryLevelLabel: UILabel!
     
     @IBOutlet weak var status: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,12 +45,14 @@ class ViewController: UIViewController {
     }
     
 }
-extension ViewController: RMBLEManagerProtocol
-{
-    func bleManager(bleManager: RMBLEManager?, didFail error: RMBLEError) {
-        
+extension ViewController: RMBLEManagerProtocol {
+    func bleManager(bleManager: RMBLEManager?, didReadRSSI rssi: NSNumber, fromPeripheral peripheral: CBPeripheral) {
+        // Ignore
     }
     
+    func bleManager(bleManager: RMBLEManager?, didFail error: RMBLEError) {
+        // Ignore
+    }
     
     func bleManager(bleManager: RMBLEManager?, didDeviceReady peripheral: CBPeripheral?) {
         for service in peripheral!.services!
