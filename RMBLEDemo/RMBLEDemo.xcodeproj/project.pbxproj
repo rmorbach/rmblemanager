@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5E4151881E67784500D8288B /* AddBleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4151871E67784500D8288B /* AddBleViewController.swift */; };
-		5E6602B51E68FA48008DA1B7 /* RMBLEManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */; };
-		5E6602B61E68FA48008DA1B7 /* RMBLEManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5EB89C8321D4406000AC1C1E /* RMBLEManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89C8221D4406000AC1C1E /* RMBLEManager.framework */; };
+		5EB89C8421D4406800AC1C1E /* RMBLEManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89C8221D4406000AC1C1E /* RMBLEManager.framework */; };
+		5EB89C8521D4406800AC1C1E /* RMBLEManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB89C8221D4406000AC1C1E /* RMBLEManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5EFB31E61E6764B7003A0FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */; };
 		5EFB31E81E6764B7003A0FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFB31E71E6764B7003A0FE3 /* ViewController.swift */; };
 		5EFB31EB1E6764B7003A0FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EFB31E91E6764B7003A0FE3 /* Main.storyboard */; };
@@ -24,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5E6602B61E68FA48008DA1B7 /* RMBLEManager.framework in Embed Frameworks */,
+				5EB89C8521D4406800AC1C1E /* RMBLEManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		5E4151871E67784500D8288B /* AddBleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBleViewController.swift; sourceTree = "<group>"; };
-		5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMBLEManager.framework; sourceTree = "<group>"; };
+		5EB89C8221D4406000AC1C1E /* RMBLEManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMBLEManager.framework; sourceTree = "<group>"; };
 		5EFB31E21E6764B7003A0FE3 /* RMBLEDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMBLEDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EFB31E71E6764B7003A0FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E6602B51E68FA48008DA1B7 /* RMBLEManager.framework in Frameworks */,
+				5EB89C8321D4406000AC1C1E /* RMBLEManager.framework in Frameworks */,
+				5EB89C8421D4406800AC1C1E /* RMBLEManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +76,7 @@
 		5EFB31E41E6764B7003A0FE3 /* RMBLEDemo */ = {
 			isa = PBXGroup;
 			children = (
-				5E6602B31E68FA36008DA1B7 /* RMBLEManager.framework */,
+				5EB89C8221D4406000AC1C1E /* RMBLEManager.framework */,
 				5EFB31E51E6764B7003A0FE3 /* AppDelegate.swift */,
 				5EFB31E71E6764B7003A0FE3 /* ViewController.swift */,
 				5EFB31E91E6764B7003A0FE3 /* Main.storyboard */,
@@ -120,7 +122,7 @@
 					5EFB31E11E6764B7003A0FE3 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = YRTZUYMLE3;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -283,6 +285,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YRTZUYMLE3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,10 +295,10 @@
 				INFOPLIST_FILE = RMBLEDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b03786c7-53fe-4b2f-9d81-a46a0595b6da";
-				PROVISIONING_PROFILE_SPECIFIER = rodrigomorbach;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -303,7 +307,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YRTZUYMLE3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RMBLEDemo",
@@ -311,8 +317,9 @@
 				INFOPLIST_FILE = RMBLEDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.morbachrodrigo.RMBLEDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

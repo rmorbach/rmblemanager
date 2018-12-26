@@ -23,60 +23,48 @@ public class RMBLEManager: NSObject {
     open var central: CBCentralManager?
     
     //Initilize the scanning process
-    public func startScan()
-    {
-        if self.central!.isScanning
-        {
+    public func startScan() {
+        if self.central!.isScanning {
             self.central!.stopScan()
         }
-        if self.central!.state == .poweredOn
-        {
+        if self.central!.state == .poweredOn {
             self.central?.scanForPeripherals(withServices: nil, options: nil)
-        }
-        else
-        {
+        } else {
             self.callErrorDelegate(for: self.central!.state)
         }
     }
     
     //Stops the scanning process
-    open func stopScan()
-    {
+    open func stopScan() {
         self.central!.stopScan()
     }
     
     //Set the device to connect to when scanning devices
-    open func connect(to device: UUID)
-    {
+    open func connect(to device: UUID) {
         self.identifierToConnect = device;
     }
     
     // "Subscribe" for receiving updates from the given characteristic
-    open func setNotifyState(for characteristic: CBCharacteristic?, enabled: Bool)
-    {
-        if characteristic != nil
-        {
-            if self.peripheral != nil
-            {
+    open func setNotifyState(for characteristic: CBCharacteristic?, enabled: Bool) {
+        if characteristic != nil {
+            if self.peripheral != nil {
                 self.peripheral!.setNotifyValue(enabled, for: characteristic!)
             }
         }
     }
     
-    //MARK: private methods and properties
+    //MARK: - private methods and properties
     var identifierToConnect: UUID?
     
-    override init()
-    {
+    private override init() {
         super.init()
         central = CBCentralManager(delegate: self, queue: nil)        
     }
     
 }
 
-//MARK: CBCentralManagerDelegate Methods
-extension RMBLEManager: CBCentralManagerDelegate
-{
+// MARK: - CBCentralManagerDelegate Methods
+extension RMBLEManager: CBCentralManagerDelegate {
     //MARK: CBCentralManagerDelegate methods
     public func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
@@ -91,35 +79,28 @@ extension RMBLEManager: CBCentralManagerDelegate
         self.peripheral = peripheral;
         self.peripheral!.delegate = self
         self.peripheral!.discoverServices(nil)
-        if self.delegate != nil
-        {
+        if self.delegate != nil {
             self.delegate?.bleManager(bleManager: self, didConnect: peripheral)
         }
     }
     
     public func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        if !self.devices.contains(peripheral)
-        {
+        if !self.devices.contains(peripheral) {
             self.devices.append(peripheral)
         }
-        if self.identifierToConnect != nil
-        {
-            if peripheral.identifier.uuidString == self.identifierToConnect!.uuidString
-            {
+        if self.identifierToConnect != nil {
+            if peripheral.identifier.uuidString == self.identifierToConnect!.uuidString {
                 self.central!.connect(peripheral, options: nil)
             }
         }
-        if self.delegate != nil
-        {
+        if self.delegate != nil {
             self.delegate?.bleManager(bleManager: self, didDiscover: peripheral)
         }
         
     }
     
-    
     public func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
-        if self.delegate != nil
-        {
+        if self.delegate != nil {
             self.delegate?.bleManager(bleManager: self, didDisconnect: peripheral)
         }
 
@@ -131,43 +112,40 @@ extension RMBLEManager: CBCentralManagerDelegate
 extension RMBLEManager: CBPeripheralDelegate
 {
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
-        guard let services = peripheral.services else
-        {
-            return
-        }
-        for service in services
-        {
+        guard let services = peripheral.services else { return }
+        for service in services {
             self.peripheral!.discoverCharacteristics(nil, for: service)
         }
     }
     
     public func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-        guard let s = self.peripheral!.services!.last else
-        {
+        guard let s = self.peripheral!.services!.last else {
             return
         }
         
-        if service.uuid.uuidString == s.uuid.uuidString
-        {
-            if self.delegate != nil
-            {
+        if service.uuid.uuidString == s.uuid.uuidString {
+            if self.delegate != nil {
                 self.delegate?.bleManager(bleManager: self, didDeviceReady: peripheral)
             }
         }
     }
     
     public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-        if error != nil{ return }
-        if self.delegate != nil
-        {
+        if error != nil { return }
+        if self.delegate != nil {
             self.delegate!.bleManager(bleManager: self, didGetNotification: characteristic)
         }
     }
     
     public func peripheral(_ peripheral: CBPeripheral, didWriteValueFor characteristic: CBCharacteristic, error: Error?) {        
-        if self.delegate != nil
-        {
+        if self.delegate != nil {
             self.delegate!.bleManager(bleManager: self, didWrite: characteristic)
+        }
+    }
+    
+    public func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
+        if self.delegate != nil {
+          self.delegate?.bleManager(bleManager: self, didReadRSSI: RSSI, fromPeripheral: peripheral)
         }
     }
 }
@@ -175,13 +153,10 @@ extension RMBLEManager: CBPeripheralDelegate
 //MARK: Error delegate method
 extension RMBLEManager
 {
-    func callErrorDelegate(for centralState: CBManagerState)
-    {
-        if self.delegate != nil
-        {
+    func callErrorDelegate(for centralState: CBManagerState) {
+        if self.delegate != nil {
             var state = RMBLEError.unknown
-            switch centralState
-            {
+            switch centralState {
             case .poweredOff:
                 state = .poweredOff
                 break;

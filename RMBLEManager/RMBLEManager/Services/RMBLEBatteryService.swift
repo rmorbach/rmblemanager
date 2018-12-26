@@ -15,13 +15,11 @@ let dataIdentifier = "2A19"
 
 public class RMBLEBatteryService: RMBLEGenericService {
     
-    private var batteryLevel: String = ""
+    private var batteryLevel: String = "?"
     
     //Check wether this is the desired service. Compare the service identifier
-    open override class func isCorrectService(service: CBService)->Bool?
-    {
-        if service.uuid.uuidString == serviceIdentifier
-        {
+    open override class func isCorrect(service: CBService) -> Bool {
+        if service.uuid.uuidString == serviceIdentifier {
             return true
         }
         return false
@@ -29,27 +27,24 @@ public class RMBLEBatteryService: RMBLEGenericService {
     
     override public init(with service: CBService) {
         super.init(with: service)
-        if service.characteristics != nil
-        {
-            for c in service.characteristics!
-            {
-                if c.uuid.uuidString == dataIdentifier
-                {
-                    self.characteristic = c;
-                    calcBatteryValue(characteristic: c)
-                    break;
-                }
+        
+        guard let characteristics = service.characteristics else { return }
+        
+        for characteristic in characteristics {
+            if characteristic.uuid.uuidString == dataIdentifier {
+                self.characteristic = characteristic
+                calcBatteryValue(characteristic: characteristic)
+                break;
             }
         }
     }
     
-    override public func updateData(characteristic: CBCharacteristic) {
+    override public func updateData(for characteristic: CBCharacteristic) {
         self.characteristic = characteristic
         calcBatteryValue(characteristic: characteristic)
     }
     
-    private func calcBatteryValue(characteristic: CBCharacteristic)
-    {
+    private func calcBatteryValue(characteristic: CBCharacteristic) {
         if let data = characteristic.value {
             var values = [UInt8](repeating: 0, count: data.count)
             data.copyBytes(to: &values, count: data.count)

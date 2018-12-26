@@ -12,35 +12,36 @@
 
 import UIKit
 
-open class RMBLEGenericService: NSObject {
+open class RMBLEGenericService: NSObject, RMBLEService {
 
     public var service: CBService?
     public var characteristic: CBCharacteristic?
     
     //Check wether this is the desired service
-    open class func isCorrectService(service: CBService)->Bool?
-    {
+    open class func isCorrect(service: CBService) -> Bool {
         //Subclasses should override this
-        return nil
+        return false
     }
     
-    public init(with service: CBService)
-    {
+    public init(with service: CBService) {
         super.init()
         self.service = service
         //Subclasses should override this method
     }
     
-    //This method should be called when the connected BLE device sends data up-to-date
-    open func updateData(characteristic: CBCharacteristic)
-    {
+    
+    ///
+    /// - Note: This method should be called when the connected BLE device sends data up-to-date
+    /// - Parameter characteristic: to be updated
+    open func updateData(for characteristic: CBCharacteristic) {
         //Subclasses should override this method
     }
     
-    //Return the formatted value from this service
-    //The calculation of the data might vary from service to service
-    open func getValue()->String?
-    {
+    
+    /// Return the formatted value from this service
+    /// - Note: The calculation of the data might vary from service to service
+    /// - Returns: service value
+    open func getValue() -> String? {
         //Subclasses should override this method
         return nil
     }

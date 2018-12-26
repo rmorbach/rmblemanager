@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		y8YKedYTNEpd6OPNN46oZQ2ix1M=
-		</data>
 		<key>Headers/RMBLEManager-Swift.h</key>
 		<data>
-		2OPAEQH+G1OoiBGngM3vfeyqSPM=
+		OBwxvpYBd5SK+92q6IdC6XoTxgY=
 		</data>
 		<key>Headers/RMBLEManager.h</key>
 		<data>
@@ -18,19 +14,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IpgSAQWBWqQZ/Jg8oh4mCoHqlqE=
+		c/OeiS2N27V++pFWlaNRGKS6iN4=
+		</data>
+		<key>Modules/RMBLEManager.swiftmodule/arm.swiftdoc</key>
+		<data>
+		e4DJmrNlorZ/iVCu5UoCNdIk8Wo=
+		</data>
+		<key>Modules/RMBLEManager.swiftmodule/arm.swiftmodule</key>
+		<data>
+		vssL8jExINnBJBaVkAX0dv/Tgzk=
 		</data>
 		<key>Modules/RMBLEManager.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		a5BC/cfXBC+WJ+htWHN9fn6qdpk=
+		p+f3v7oxF/YndXZIcYZygrVr4JE=
 		</data>
 		<key>Modules/RMBLEManager.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		VTbqgO8ztsCLDj4CHA/zoBnSdQQ=
+		De38RESwCfHhV1kZa4YUD5yaS0c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		C0hVgyaGymILkUuUFvnIIrkPT9I=
+		nBgbnRFFP3TOhim+XlJknQIkssc=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,11 +43,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2OPAEQH+G1OoiBGngM3vfeyqSPM=
+			OBwxvpYBd5SK+92q6IdC6XoTxgY=
 			</data>
 			<key>hash2</key>
 			<data>
-			AWjfSz4lpuxAGogaPKE8HS3yP//LgIiJdoZzyoTK71w=
+			1E37wDIzAc9RxnF0J8N+Xg6Zl5IYnhMj2rToavm1Z74=
 			</data>
 		</dict>
 		<key>Headers/RMBLEManager.h</key>
@@ -57,43 +61,65 @@
 			3fOb0g3P+3HNZD/Vyn5CrKVaw/phl4osnWFGjt5uEpQ=
 			</data>
 		</dict>
+		<key>Modules/RMBLEManager.swiftmodule/arm.swiftdoc</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			e4DJmrNlorZ/iVCu5UoCNdIk8Wo=
+			</data>
+			<key>hash2</key>
+			<data>
+			+P86q7IMskU/H7hcdjKoSlnRL1T7SxcKptKnvvtnHaY=
+			</data>
+		</dict>
+		<key>Modules/RMBLEManager.swiftmodule/arm.swiftmodule</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vssL8jExINnBJBaVkAX0dv/Tgzk=
+			</data>
+			<key>hash2</key>
+			<data>
+			MKXHDwSCLeE22giII7BqebWV3gqVvSN1V9aX0EMRDY0=
+			</data>
+		</dict>
 		<key>Modules/RMBLEManager.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a5BC/cfXBC+WJ+htWHN9fn6qdpk=
+			p+f3v7oxF/YndXZIcYZygrVr4JE=
 			</data>
 			<key>hash2</key>
 			<data>
-			1luRaz2pjQx9iBKQp0qqISzkazOSVwjoQDGBP2/ExFo=
+			uUGniUT3mPziYokpN00uLjk+EWgF6DY1bUWTn33rvyc=
 			</data>
 		</dict>
 		<key>Modules/RMBLEManager.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			VTbqgO8ztsCLDj4CHA/zoBnSdQQ=
+			De38RESwCfHhV1kZa4YUD5yaS0c=
 			</data>
 			<key>hash2</key>
 			<data>
-			UIh4Pmfpp8jtDfPDGJOYx7gqregIb4cFmQ+q2SfcnJs=
+			qWbVdgqQPU/bq9ASePuWeujLxUgBvu+bTBkF+iErlyg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C0hVgyaGymILkUuUFvnIIrkPT9I=
+			nBgbnRFFP3TOhim+XlJknQIkssc=
 			</data>
 			<key>hash2</key>
 			<data>
-			mcK6FZAz8z/5nxBYF6dAiB0NF/MsXhduKOcJriURmDM=
+			toNIeeyNVoulOqfHFg9BR7VvGsM/bvnsBE52GWKy2aI=
 			</data>
 		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -124,24 +150,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -177,13 +191,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>
